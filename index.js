@@ -60,15 +60,11 @@ let users = [
 
 
 let sum = 0;
-for(let i = 0; i < users.length; i++) {
-    if(true){
-        users[i].balance = users[i].balance.replace(/[$,]/g, '');   
-    }
-    if(users[i].balance >= 2000) {
+for (let i = 0; i < users.length; i++) {
+    let balances = Number(users[i].balance.replace(/[$,]/g, ''));   
+    if (balances >= 2000) {
         console.log(users[i].phone);
     }
-    if(true){
-        sum += Number(users[i].balance)
-    }
+    sum += Number(balances)
 } 
 console.log(`Cума всіх балансів = $${sum.toFixed(2)}`);
